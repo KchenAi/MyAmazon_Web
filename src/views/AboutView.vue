@@ -1,15 +1,21 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <recyclerView :items="getData()"></recyclerView>
   </div>
 </template>
+
+<script lang="ts" setup>
+import RecyclerView from '../components/RecyclerView/index.vue'
+function getData() {
+  return ['asdadda', '啊实打实的']
+}
+</script>
 
 <style>
 @media (min-width: 1024px) {
   .about {
     min-height: 100vh;
     display: flex;
-    align-items: center;
   }
 }
 </style>
