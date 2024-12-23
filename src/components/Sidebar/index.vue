@@ -2,7 +2,7 @@
   <el-menu
     :default-active="activeIndex"
     class="el-menu-vertical-demo"
-    router="true"
+    :router="true"
     :collapse="isCollapse"
   >
     <el-menu-item index="1" route="/">

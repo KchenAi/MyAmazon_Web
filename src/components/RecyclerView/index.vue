@@ -1,6 +1,6 @@
 <template>
   <div class="recyclerview">
-    <div v-for="(item, index) in items" :key="index" class="recyclerview-item">
+    <div v-for="(item, index) in items" :key="index">
       <component :is="getItemComponent()" :data="item"></component>
     </div>
   </div>
@@ -21,8 +21,6 @@ function getItemComponent() {
 <style>
 .recyclerview {
   /* 样式根据需要自定义 */
-}
-.recyclerview-item {
-  /* 样式根据需要自定义 */
+  width: 100%;
 }
 </style>
