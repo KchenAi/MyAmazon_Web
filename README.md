@@ -1,5 +1,6 @@
 # MyAmazon_Web
-采用VUE3的web前端，用于本人的工具集
+
+采用VUE3的web前端，用于本人的工具集。
 
 This template should help get you started developing with Vue 3 in Vite.
 
