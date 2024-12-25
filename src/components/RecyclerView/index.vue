@@ -1,16 +1,16 @@
 <template>
   <div class="recyclerview">
     <div v-for="(item, index) in items" :key="index">
-      <component :is="getItemComponent()" :data="item"></component>
+      <component :is="getItemComponent()" :data="item" :index="index"></component>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import ProductViewHolder from './viewHolder/ProductViewHolder.vue'
-
+import { ProductInfo } from '@/entry/ProductInfo'
 const props = defineProps({
-  items: Array<string>,
+  items: Array<ProductInfo>,
 })
 
 function getItemComponent() {
