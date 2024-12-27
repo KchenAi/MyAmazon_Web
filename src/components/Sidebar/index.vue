@@ -3,7 +3,7 @@
     :default-active="activeIndex"
     class="el-menu-vertical-demo"
     :router="true"
-    :collapse="isCollapse"
+    :collapse="userSettingStore.isCollapse"
   >
     <el-menu-item index="1" route="/">
       <el-icon><list /></el-icon>
@@ -28,10 +28,11 @@
 import { ref, computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { HotWater, Search, Setting, List } from '@element-plus/icons-vue'
+import useUserSettingStore from '@/stores/modules/userSetting'
 
 const route = useRoute()
 
-const isCollapse = ref(false)
+const userSettingStore = useUserSettingStore()
 
 const activeIndex = computed(() => {
   if (route.path === '/') {
@@ -52,5 +53,8 @@ const activeIndex = computed(() => {
 .el-menu-vertical-demo:not(.el-menu--collapse) {
   width: 150px;
   min-height: 400px;
+}
+.el-menu {
+  border-right: none !important;
 }
 </style>
