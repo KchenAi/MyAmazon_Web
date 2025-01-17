@@ -60,7 +60,10 @@ function changeCollapse() {
   display: flex;
   flex-direction: column;
   align-items: center;
+<<<<<<< HEAD
   will-change: transform;
+=======
+>>>>>>> 0ed669363022770b115ed5bf61e8435491c95261
 }
 
 .sidebar-menu {
